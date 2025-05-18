@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأقسام</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+</head>
+<body>
+    <div id="formtwo">
+        <h1 id="getName"></h1>
+        <span id="logOut" >تسجيل الخروج </span>
+
+    </div>
+    <div id="main">
+    
+        <div class="spinner"></div>
+        <h1 id="text">قسم إداره الجوده</h1>
+    </div>
+
+
+    <div id="btns">
+        <button id="poly">البولى إيثلين</button>
+        <button id="pvc">P.V.C</button>
+        <button id="load">التحميل</button>
+    </div>
+
+
+    <script>
+        let arr = [];
+
+        // Optional: Add hover effect
+        const text = document.getElementById('text');
+        text.addEventListener('mouseover', () => {
+            text.style.transform = 'scale(1.05)';
+            text.style.transition = 'transform 0.3s ease';
+        });
+        text.addEventListener('mouseout', () => {
+            text.style.transform = 'scale(1)';
+        });
+
+        document.getElementById('poly').addEventListener('click', () => {
+            window.open('poly.html', '_blank');
+        });
+
+        document.getElementById('pvc').addEventListener('click', () => {
+            window.open('PVC.html', '_blank');
+        });
+        let doc = document.getElementById('getName')
+
+if (window.localStorage.getItem('login')!= null) {
+    arr = JSON.parse(window.localStorage.getItem('login'))
+}else{
+    arr = [];
+
+}
+document.getElementById('logOut').addEventListener('click', function () {
+    let value = prompt('هل تريد الخروج؟');
+    if (value !== null) {
+        // إذا ضغط المستخدم على OK
+        console.log('تم تأكيد الخروج');
+        // تنفيذ الإجراء المطلوب (مثال: إعادة التوجيه إلى صفحة تسجيل الدخول)
+        window.localStorage.removeItem('login'); // حذف بيانات تسجيل الدخول من localStorage
+        window.location.href = 'index.html'; // إعادة التوجيه إلى صفحة تسجيل الدخول
+    } else {
+        // إذا ضغط المستخدم على Cancel
+        console.log('تم إلغاء الخروج');
+    }
+});
+   if (window.localStorage.getItem('isLoggedIn') === 'true') {
+                form.style.display = 'none'; // إخفاء النموذج
+                window.location.href = 'start.html'; // التوجيه إلى صفحة البداية
+            }
+
+let getnmeAgain = window.localStorage.getItem("nameUser")
+if (document.getElementById('getName').innerHTML ==='undefined') {
+    
+    document.getElementById('getName').innerHTML = `<span>اسم المستخدم </span> : ${getnmeAgain}`
+}else{
+    const newtry = window.localStorage.getItem('login')
+    const obj = JSON.parse(newtry)
+   if (newtry) {
+    
+       document.getElementById('getName').innerHTML = `<span>اسم المستخدم </span> : ${obj.text}`
+   }else{
+
+    document.getElementById('getName').innerHTML = `اسم المستخدم  : <span id = 'getAdmin'>${getnmeAgain}</span>`
+
+}
+
+Array.from(document.getElementById('getName').children).forEach((ele)=>{
+if (ele.innerHTML.includes('ضياء')|| ele.innerHTML.includes('diaa') || ele.innerHTML.includes('d', 'i', 'a', 'a') ) {
+    ele.style.color = 'green'
+    ele.classList.add('admin')
+    console.log(ele)
+}
+}
+)
+}
+
+
+</script>
+</body>
+</html>

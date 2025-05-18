@@ -1,0 +1,15 @@
+{
+  "name": "Pipe Management System",
+  "short_name": "PipeMS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "png1.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

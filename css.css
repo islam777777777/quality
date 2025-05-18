@@ -1,0 +1,208 @@
+/*  Main Page */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #2c3e50, #1a1a1a);
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+#main {
+    transform: translate(131%, 23%);
+    width: 28%;
+    color: white;
+    font-family: math;
+    zoom: 91%;
+    margin-top: 30px;
+}
+
+#text {
+    font-size: 2.5em;
+    color: #052d31db;
+    text-align: center;
+    position: relative;
+    animation: slideIn 1.5s ease-out, glow 2s ease-in-out infinite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid;
+    margin-bottom: 10px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#btns {
+    width: 34%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: grid;
+    gap: 15px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#btns button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #10404b, #174752);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#btns button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #6dd5ed, #2193b0);
+}
+
+#btns button:active {
+    transform: scale(0.95);
+}
+
+#formtwo {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #7d8383;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    opacity: 0; /* لإخفاء العنصر قبل الأنيميشن */
+    transform: translateY(-50px); /* تحريك العنصر للأعلى قبل الأنيميشن */
+    animation: fadeInSlide 1s ease-out forwards; /* تطبيق الأنيميشن */
+    margin-bottom: -18px;
+    margin-top: 10px;
+}
+
+/* أنيميشن fadeInSlide */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* البداية: العنصر في الأعلى */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* النهاية: العنصر في مكانه الطبيعي */
+    }
+}
+
+#getName {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glowText 2s ease-in-out infinite;
+    margin-top: 1px;
+}
+
+/* أنيميشن توهج النص */
+@keyframes glowText {
+    0%, 100% {
+        text-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
+    }
+    50% {
+        text-shadow: 0 0 10px #6dd5ed, 0 0 20px #6dd5ed, 0 0 30px #6dd5ed;
+    }
+}
+
+#logOut {
+    color: red;
+    font-size: 16px;
+}
+
+.admin::after {
+    content: 'مدير الجوده';
+    display: block;
+    color: #1f325b;
+}
+
+#massegon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #0084ff;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+#massegon i {
+    font-size: 24px;
+}
+
+#massegon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: #0073e6;
+}

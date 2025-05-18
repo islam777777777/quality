@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(135deg, #0f0916, #4c5463);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#textLine {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 9px solid #09409b;
+}
+#box {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: black;
+    box-shadow: 1px 1px 10px #1b1a1a;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+#btnAccept{
+
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color:green ;
+font-size: 26px;
+font: bolder;
+color: white;
+}
+#divButton {
+    display: flex
+    ;
+        justify-content: space-between;
+    }
+
+#btnRehect{
+
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color:rgb(232, 18, 18) ;
+font-size: 26px;
+font: bolder;
+color: white;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+#rehect{
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        display: block;
+        background-color: rgb(232, 18, 18);
+        font-size: 23px;
+        color: white;
+        background: cornflowerblue;
+}
+#registerContainer{
+    display: flex
+    ;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إداره المستخدمين</title>
+    <link rel="stylesheet" href="register.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .register-box {
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .register-box button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .approve-btn {
+            background: #28a745;
+            color: white;
+        }
+        .reject-btn {
+            background: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="textLine">إداره المستخدمين</h1>
+    <div id="registerContainer"></div>
+    
+
+ 
+ 
+                <!-- Firebase SDK (إصدار 8) -->
+                <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script> <!-- أضفتها لـ Realtime Database -->
+                <!-- لو عايز Firestore، سيب السطر ده، لو لأ شيله -->
+              
+                <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+               
+                <!-- ملف تهيئة Firebase -->
+                <script src="firebase-config.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
